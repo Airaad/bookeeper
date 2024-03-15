@@ -1,0 +1,34 @@
+<!-- when user wants to edit any book in it's library -->
+
+<%- include("partials/header.ejs") %>
+<div class="notes-div">
+    <form action="/notes/<%= editBook[0].book_id %>/edit" method="post">
+        <div class="container-md">
+            <div class="mb-3">
+                <h1>Edit Book</h1>
+                <label for="exampleFormControlInput1" class="form-label"><strong>ISBN-13</strong></label>
+                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="13 Digit ISBN for Book Image" name="book-isbn" autocomplete="off" value="<%= editBook[0].isbn %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label"><strong>Title</strong></label>
+                <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Name of the Book" name="book-title" autocomplete="off" value="<%= editBook[0].title %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput3" class="form-label"><strong>Author</strong></label>
+                <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Author Name" name="book-author" autocomplete="off" value="<%= editBook[0].author %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"><strong>Notes</strong></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="book-body" placeholder="Your Notes" required><%= editBook[0].body %></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput4" class="form-label"><strong>Rating</strong></label>
+                <input type="number" min="1" max="5" class="form-control" style="width: 100px;" id="exampleFormControlInput4" name="book-rating" value="<%= editBook[0].rating %>" required>
+            </div>
+    
+            <button type="submit" class="btn btn-dark save-btn">Save</button>
+        </div>
+    </form>
+    </div>
+
+<%- include("partials/footer.ejs") %>

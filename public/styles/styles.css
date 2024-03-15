@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/*******************************************Header Section**********************************/
+
+.header-div{
+    position: relative;
+    background-image: url("/images/13968246.jpg");
+    background-position: center top;
+    background-size: max(1200px, 100vw);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.background-img-overlay{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    opacity: 0.7;
+    background-color: black;
+    
+}
+
+.header-content{
+    height: 100%; /*.header-content's parent (.header-div) height is set to 80vh so we can set it's height in % */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    gap: 23px;
+    padding-bottom: 100px;
+    
+}
+
+.header-buttons{
+    display: flex;
+    gap: 20px;
+}
+.header-buttons button:hover{
+    background-color: #FAA300;
+}
+
+.navbar{
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+    margin-left: 30px;
+
+}
+.navbar-brand{
+    font-size: 1.8rem;
+}
+.navbar-nav{
+    margin-left: 20px;
+    font-size: 1.1rem;
+}
+.navbar a{
+    color: white;
+}
+.navbar a:hover{
+    color: #FAA300;
+}
+
+.login-div{
+    margin-right: 50px;
+    
+}
+
+.dropdown{
+    margin-left: 20px;
+}
+
+/************************************************************Hero Section*****************************/
+
+.starting-header{
+    margin-top: 70px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.headline{
+    text-align: center;
+    max-width: 70%;
+}
+
+hr{
+    width: 60%;
+    border: 2px solid grey;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 80px;
+}
+
+
+/*************************************************Book Display Section************************/
+
+.book-shelf{
+    display: flex;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+    gap:23px
+}
+.book-title{
+    width: 60%;
+}
+
+.book-img{
+    box-shadow: 5px 5px rgb(35, 28, 28);
+}
+
+.book-paragraph{
+    width: 800px;
+}
+
+@media(max-width:900px){
+    .book-shelf{
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        flex-direction: column;
+    }
+
+    .book-title{
+        width: 100%;
+    }
+
+    .book-paragraph{
+        width: 100%;
+    }
+    
+}
+
+/**************************************Note Taking Section******************************/
+
+.notes-div{
+    padding: 30px;
+    color: #FAA300;
+}
+.save-btn{
+    background-color: #FAA300;
+    border: none;
+}
+
+/************************************Notes View Section*******************************/
+
+.view-section{
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 80%;
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.note-view{
+    display: flex;
+    gap: 24px;
+}
+
+
+
+.note-title{
+    display: flex;
+    flex-direction: column;
+}
+
+.modify-btn{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/***********************************About page**********************/
+.about-container{
+    text-align: left;
+    width: 50%;
+    padding: 20px;
+    margin-top: 50px;
+    
+}
+.about-container h2{
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+.about-container p{
+    font-size: 1.2rem;
+}
+.about-container li{
+    font-size: 1.2rem;
+}
+
+@media(max-width:1100px){
+    .about-container{
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        margin-top: 50px;
+        
+    }
+    .about-container h1{
+        font-size: 3rem;
+        font-weight: 900;
+        margin-bottom: 30px;
+    }
+
+    
+}
+
+.about-header{
+    position: relative;
+    background-color: #FAA300;
+    height: 70vh;
+}
+
+.about-content{
+    height: 100%; /*.about-content parent (.header-div) height is set to 80vh so we can set it's height in % */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    gap: 23px;
+    padding-bottom: 100px;
+    
+}
+
+.about-navbar a:hover{
+    color: black;
+}
+
+
+/*******************************************Login Page Section*********************************/
+
+.login{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/images/3760323.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.login form{
+    width: 400px;
+}
+
+
+/*************************How to get started component************************/
+.intro-start{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    gap: 200px;
+}
+
+.intro-component{
+    display: flex;
+    gap: 100px;
+}
+
+.intro-content{
+    width: 50%;
+}
+
+.intro-content h2{
+    color: #FAA300;
+    font-weight: 700;
+}
+
+.intro-content p{
+    color: #161718
+}
+
+.intro-img{
+    width: 500px;
+    height: 400px;
+    border-radius: 40px;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media(max-width:1100px){
+    
+    .intro-component{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .intro-img{
+        width: 400px;
+        height: 400px;
+        border-radius: 40px;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .intro-content{
+        text-align: center;
+    }
+}
+
+/*********************************Footer ***************************/
+.footer-container{
+    background-color: #FAA300;
+}
+
+.footer-container{
+    color: white;
+}
+
+.footer-list a{
+    color: white;
+}
+
+.footer-list a:hover{
+    color: black;
+}
+
+/********************************************Account manage******************************/
+
+#heading{
+    max-width: 200px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    background-color: #E8751A;
+}
+#heading h1{
+    font-size: 2rem;
+}
+
+#account-manage{
+    background-color: #FAA300;
+    background-image: -webkit-linear-gradient(65deg, #E8751A 50%, #FAA300 50%);
+    min-height: 1000px;
+}
+
+.box {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+
+.change{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.change span{
+    font-size: 20px;   
+    padding-left: 20px;
+    color: grey;
+    margin-right: auto;
+}
+
+.change button{
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    min-height: 50px;
+    width: 50px; 
+    color: #FAA300;
+    font-size: 20px;
+    border-width: 0;
+}
+.change button:hover{
+    color:#E8751A;
+}
+
+.edit-account{
+    display: flex;
+    gap: 110px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.edit-account button{
+    border: none;
+    background-color: transparent;
+    min-height: 50px;
+    width: 50px; 
+    color: #FAA300;
+    font-size: 20px;
+    border-width: 0;
+}
+.edit-account button:hover{
+    color:#E8751A;
+}
+
+.edit-account input {
+    
+    text-align: left;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 400;
+    width: 80%;
+}
+  
+.edit-account input:focus {
+    outline: none;
+    box-shadow: inset 0 -3px 0 0 #FAA300;
+}
+
+.change-password{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #f1f1f1;
+}
+
+.change-password button{
+    border: none;
+    background-color: transparent;
+    min-height: 50px;
+    width: 50px; 
+    color: #FAA300;
+    font-size: 20px;
+    border-width: 0;
+}
+.change-password button:hover{
+    color:#E8751A;
+}
+
+.edit-password{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.edit-password button{
+    border: none;
+    background-color: transparent;
+    min-height: 40px;
+    width: 70px; 
+    color: #FAA300;
+    font-size: 18px;
+    border-width: 0;
+}
+
+.edit-password button:hover{
+    color:#E8751A;
+}
+
+.edit-password input {
+    text-align: left;
+    height: 40px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 200;
+    width: 80%;
+}
+  
+.edit-password input:focus {
+    outline: none;
+    box-shadow: inset 0 -3px 0 0 #FAA300;
+}
+
+
+
+
+
+
+
+

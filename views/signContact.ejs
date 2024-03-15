@@ -1,0 +1,44 @@
+<!-- contact page when user is signed in -->
+
+<%-include("partials/header.ejs")  %>
+   <!--Header Section-->
+<div class="about-header"> 
+    <nav class="navbar navbar-expand-lg about-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/myaccount"><i class="fa-solid fa-bookmark"></i> BooKeeper</a>
+          <button style="background-color: #FAA300;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" aria-current="page" href="/myAccount">Home</a>
+              <a class="nav-link" href="/signContact">Contact</a>
+              <a class="nav-link" href="/signAbout">About</a>
+            </div>
+
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-regular fa-circle-user fa-lg"></i> My Account
+                </a>
+                <ul style="background-color: #FAA300;" class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/manageAccount">Manage Account</a></li>
+                  <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+    </nav>
+
+    <div class="about-content">
+        <h1 style="width: 70%; text-align: center;">We'd love to hear your thoughts and feedback <i class="fa-solid fa-phone"></i></h1>
+    </div>
+</div>
+
+
+   <div class="about-container">
+      <h2>Get in touch</h2>
+      <p>Have a question, suggestion, or just want to share your love of books? We'd love to hear from you! Feel free to reach out to us via email at <a href="">sheikhairaad@gmail.com</a></p> 
+      <p>Thank you for choosing BooKeeper as your trusted companion on your reading journey</p>
+
+   </div>
+<%-include("partials/footer.ejs")  %>

@@ -1,0 +1,33 @@
+<!-- when user wants to view any book from it's library -->
+
+<%- include("partials/header.ejs") %>
+<body style="background-color: #161718; color: white;">
+  
+<div class="view-section">
+<div class="note-view">
+    <img src="https://covers.openlibrary.org/b/isbn/<%= myBooks[0].isbn %>-M.jpg?default=false" alt="">
+    <div class="note-title">
+        <h3><%= myBooks[0].title %></h3>
+        <span style="color: #FAA300;"><%= myBooks[0].author %></span>
+        <div>
+          <span style="color: #FAA300;"><%= myBooks[0].rating %>/5</span>
+          <% for(let j = 0; j < myBooks[0].rating; j++){%> <span>⭐</span> <% } %>
+        </div>
+        
+        <div class="modify-btn">
+          <a href="/notes/<%= myBooks[0].book_id %>/edit"><button style="background-color: #FAA300;" type="button" class="btn btn-warning"><i class="fa-solid fa-pencil"></i> Edit</button></a>
+          <a href="/notes/<%= myBooks[0].book_id %>/delete"><button style="background-color: #FAA300;" type="button" class="btn btn-warning"><i class="fa-solid fa-trash"></i> Delete</button></a>
+        </div>
+        
+      </div>
+</div>
+<p><%= myBooks[0].body %></p>
+</div>
+  
+</body>
+
+
+
+
+
+<%- include("partials/footer.ejs")%>

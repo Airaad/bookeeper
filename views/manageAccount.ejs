@@ -1,0 +1,68 @@
+<!-- when user wants to changes its credential -->
+<%- include("partials/header.ejs") %>
+<body id="account-manage">
+
+<div class="box" id="heading">
+    <h1>
+      Basic info
+    </h1>
+</div>
+
+<div class="box">
+    <div class="change">
+        <span style="color: #161718;">Name</span>
+        <span id="title<%= credential.first_name %>"><%= credential.first_name %></span> 
+        <button id="editCredentialBtn<%= credential.first_name %>" onclick="handler('<%= credential.first_name %>')"><i class="fa-solid fa-pencil"></i></button>
+        <form class="edit-account" action="/manageName" method="POST">
+            <input type="hidden" name="updatedItemId" value="<%= credential.id %>">
+            <input id="inputCred<%= credential.first_name%>" type="text" maxlength="50" value=<%= credential.first_name%> name ="edit-name" autocomplete="off" autofocus="true" hidden="true">
+            <button id="done<%= credential.first_name%>" type="submit" hidden><i class="fa-solid fa-check"></i></button>
+        </form>
+    </div>
+
+    <div class="change">
+        <span style="color: #161718;">Email</span>
+        <span id="title<%= credential.user_name %>"><%= credential.user_name %></span> 
+        <button id="editCredentialBtn<%= credential.user_name%>" onclick="handler('<%= credential.user_name %>')"><i class="fa-solid fa-pencil"></i></button>
+        <form class="edit-account" action="/manageEmail" method="POST">
+            <input type="hidden" name="updatedItemId" value="<%= credential.id %>">
+            <input id="inputCred<%= credential.user_name%>" type="text" maxlength="100" value=<%= credential.user_name%> name ="edit-email" autocomplete="off" autofocus="true" hidden="true">
+            <button id="done<%= credential.user_name%>" type="submit" hidden><i class="fa-solid fa-check"></i></button>
+        </form>
+    </div>
+
+    <div class="change-password">
+        <button id="pass-btn" style="width: 100%;" onclick="password()">Change Password</button>
+        <form class="edit-password" action="/managePassword" method="POST">
+            <input type="hidden" name="updatedItemId" value="<%= credential.id %>">
+            <label class="pass" hidden>Old password</label>
+            <input class="pass" type="password" maxlength="100" name ="old-password" autocomplete="off" autofocus="true" hidden="true" required>
+            <label class="pass" hidden>New password</label>
+            <input class="pass" type="password" maxlength="100" name ="new-password" autocomplete="off" autofocus="true" hidden="true" required>
+            <button id="pass-confirm" type="submit" hidden>confirm</button>
+        </form>
+    </div>
+
+</div>
+
+
+<script>
+    function handler(id) {
+      document.getElementById("title" + id).setAttribute("hidden", true);
+      document.getElementById("editCredentialBtn" + id).setAttribute("hidden", true);
+      document.getElementById("done" + id).removeAttribute("hidden");
+      document.getElementById("inputCred" + id).removeAttribute("hidden");
+    }
+
+    function password(){
+        document.getElementById("pass-btn").setAttribute("hidden", true);
+        let data = document.getElementsByClassName("pass");
+        for(let i = 0; i < data.length; i++){
+            data[i].removeAttribute("hidden");
+        }
+        document.getElementById("pass-confirm").removeAttribute("hidden");
+    }
+  </script>
+
+</body>
+<%- include("partials/footer.ejs") %>

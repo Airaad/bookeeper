@@ -1,0 +1,46 @@
+<!-- about page -->
+
+<%-include("partials/header.ejs")  %>
+   <!--Header Section-->
+<div class="about-header"> 
+    <nav class="navbar navbar-expand-lg about-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"><i class="fa-solid fa-bookmark"></i> BooKeeper</a>
+          <button style="background-color: #FAA300;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+              <a class="nav-link" href="/contact">Contact</a>
+              <a class="nav-link" href="/about">About</a>
+            </div>
+
+            <div class="navbar-nav ms-auto login-div">
+              <a class="nav-link" aria-current="page" href="/login"><i class="fa-solid fa-circle-user"></i> Sign in</a>
+              <a class="nav-link" href="/register"><i class="fa-solid fa-user-pen"></i> Register</a>
+              
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <div class="about-content">
+        <h1 style="width: 70%; text-align: center;">About BooKeeper</h1>
+    </div>
+</div>
+
+
+   <div class="about-container">
+      <h2>Welcom to BooKeeper</h2>
+      <p>BooKeeper provides you a platform for storing and organizing all your book notes at one place. At Bookeeper, we believe that every book has the power to inspire, educate, and transform lives. Our mission is to help readers make the most out of their reading experiences by providing a platform to capture insights, organize thoughts, and engage with the content on a deeper level.</p> 
+
+      <h2>What we offer</h2>
+      <p><ul>
+        <li>Effortless Note-Taking: Our intuitive interface makes it easy to capture key insights, quotes, and thoughts as you read.</li>
+        <li>Organized Library: Create a personalized digital library to keep track of all your books, notes in one place.</li>
+        <li>Privacy and Security: Rest assured that your data is safe and secure with BooKeeper's robust encryption and privacy measures.</li>
+      </ul></p>
+
+   </div>
+<%-include("partials/footer.ejs")  %>

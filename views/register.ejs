@@ -1,0 +1,27 @@
+<!-- page for registering a new user -->
+
+<%- include("partials/header.ejs") %>
+<main class="form-signin w-100 m-auto login ">
+    <form action="/register" method="POST">
+        <i class="fa-solid fa-bookmark fa-xl mb-4"></i>
+        
+        <h1 class="h3 mb-3 fw-normal">Please Register</h1>
+    
+        <div class="form-floating">
+          <input type="email" class="form-control" id="floatingInput" name="username" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingName" name="name" placeholder="name">
+            <label for="floatingName">Name</label>
+          </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+    
+        <button class="btn btn-dark w-100 py-2" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-body-secondary">© <%= currentYear %></p>
+      </form>
+  </main>
+<%- include("partials/footer.ejs") %>
