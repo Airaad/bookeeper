@@ -7,7 +7,7 @@ import { Strategy } from "passport-local";
 import session from "express-session";
 import env from "dotenv";
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 const saltRounds = 10; //10 salt rounds are being used in the bcrypt hashing of user password.
 env.config();
